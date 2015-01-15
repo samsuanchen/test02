@@ -9,8 +9,7 @@ var maincomponent = React.createClass({
   	},this);
   },
   render: function() {
-    return <div>Hello {this.state.result}</div>
-    <canvas id="c" width="500" height="500"></canvas>;
+    return (<div>Hello {this.state.result}</div>);
   }
 });
 module.exports=maincomponent;

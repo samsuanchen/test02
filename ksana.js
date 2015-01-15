@@ -6,7 +6,7 @@ jsonp_handler({
  "baseurl": "http://samsuanchen@rawgit.com/samsuanchen/test02/master/",
  "description": "",
  "files": [
-  "index.html",
+  "index.html","index.css",
   "bundle.js",
   "jquery.js",
   "react-with-addons.js",
