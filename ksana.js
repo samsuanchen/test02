@@ -10,8 +10,9 @@ jsonp_handler({
   "bundle.js",
   "jquery.js",
   "react-with-addons.js",
-  "ksana.js",
-  "sample.kdb"
+  "sample.kdb",
+  "fabric.js",
+  "ksana.js"
  ],
  "filesizes": [
   311,
