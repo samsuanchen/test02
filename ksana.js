@@ -1,6 +1,6 @@
 jsonp_handler({
  "version": "1",
- "build": 17,
+ "build": 18,
  "title": "test02",
  "minruntime": 4,
  "baseurl": "http://samsuanchen@rawgit.com/samsuanchen/test02/master/",
@@ -13,6 +13,12 @@ jsonp_handler({
   "react-with-addons.js",
   "sample.kdb",
   "fabric.js",
+  "jefvm.v3.js",
+  "jefvm.v3_ext.js",
+  "jefvm.v3_tst.js",
+  "extData.js",
+  "set.js",
+  "pset.js",
   "ksana.js"
  ],
  "filesizes": [
@@ -28,12 +34,12 @@ jsonp_handler({
  "filedates": [
   "2015-01-15T18:21:16.000Z",
   "2015-01-13T00:00:48.000Z",
-  "2015-01-15T18:21:27.000Z",
+  "2015-01-15T23:03:58.000Z",
   "2015-01-12T02:13:08.000Z",
   "2015-01-12T02:13:08.000Z",
   "2015-01-12T02:13:20.000Z",
   "2015-01-12T23:54:27.000Z",
-  "2015-01-15T18:19:32.000Z"
+  "2015-01-15T18:21:27.000Z"
  ],
- "date": "2015-01-15T18:21:27.906Z"
+ "date": "2015-01-15T23:03:58.515Z"
 })

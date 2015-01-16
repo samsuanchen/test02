@@ -9,7 +9,9 @@ var maincomponent = React.createClass({
   	},this);
   },
   render: function() {
-    return (<div>Hello {this.state.result}</div>);
+    return (<div>Hello {this.state.result}
+      <svg><circle r='20' cx='100' cy='100'></circle></svg>
+      </div>);
   }
 });
 module.exports=maincomponent;

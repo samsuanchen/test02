@@ -1,0 +1,48 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" type="text/css" href="dog_stickman.css">
+<img id="DogImg" src="dog.png" width="500" height="500" hidden>
+<button id='btnRunJef' onclick='vm.exec(jef.value||jef.textContent)'>跑 jef</button>
+<span id='msgJef'></span><br/>
+<textarea id="jef"> #a00 set T1.stroke #fffc set C1.fill
+  : act 
+    dup  +set    [C3,C7,T3,T7].left
+    over +set [C1,C4,C8,T4,T8].left
+    dup  +set          [L2,L6].left
+    over +set    [L2,L6,L3,L7].width
+    dup  +set          [L2,L3].height
+    dup  +set    [C3,C4,T3,T4].top
+    dup  +set               C1.radius
+  ;
+  code swap function(){ // ( a b -- b a )
+    var S=vm.dStack, L=S.length, X=S[L-2];
+  	S[L-2]=S[L-1], S[L-1]=X;
+  } end-code
+  code renderAll function(){ // ( -- )
+  	canvas.renderAll();
+  } end-code
+  5 -5 begin renderAll swap 500 ms act again
+</textarea><br/>
+<button id='btnRunJs' onclick='eval(js.value||js.textContent)'>跑 js</button>
+<span id='msgJs'></span><br/>
+<textarea id="js">
+  B[0].set({ fill: '#080', shadow: 'rgba(0,0,0,0.3) 5px 5px 5px'});
+  canvas.renderAll();
+  vm.exec('5 for 200 ms 2 +set G.angle 200 ms -2 +set G.angle next');
+</textarea><br/>
+<canvas id="c" width="500" height="500" style="border:1px solid #ccc"></canvas>
+<script src='jefvm.v3.js'    ></script>
+<script src='jefvm.v3_ext.js'></script>
+<script src='jefvm.v3_tst.js'></script>
+<script src="fabric.js"></script><!--http://fabricjs.com/articles-->
+<script src="dog_stickman.js">以 js 指令 繪製 畫面上 物件</script>
+<script>
+	canvas.on('mouse:move', function(options) { // when mouse moved
+		msgJs.innerHTML=options.e.clientX+' '+options.e.clientY; // show location
+		if (options.target) { // if mouse move over some object
+			msgJs.innerHTML+=' '+options.target.type+' '+(options.target.id||''); // show object id
+		}
+	});
+</script>
+<script src="extData.js">讓 jef 能認得 色碼 及 物件屬性 放上 data stack</script>
+<script src="set.js">定義指令 set 可將 畫面上 物件 的 屬性 設為 指定值</script>
+<script src="pSet.js">定義指令 +set 可將 畫面上 物件 的 屬性 增加 指定值</script>

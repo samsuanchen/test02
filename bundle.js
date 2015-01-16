@@ -5326,7 +5326,9 @@ var maincomponent = React.createClass({displayName: "maincomponent",
   	},this);
   },
   render: function() {
-    return (React.createElement("div", null, "Hello ", this.state.result));
+    return (React.createElement("div", null, "Hello ", this.state.result, 
+      React.createElement("svg", null, React.createElement("circle", {r: "20", cx: "100", cy: "100"}))
+      ));
   }
 });
 module.exports=maincomponent;
